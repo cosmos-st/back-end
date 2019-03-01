@@ -1,5 +1,7 @@
 "
-I'm a system that manages data. I allow the registration of streams and data points on them.
+I'm a system that manages data. 
+
+I allow the registration of streams and data points on them.
 
 I also allow deregistration of streams.
 "
