@@ -25,7 +25,7 @@ TriggerManagementModule >> name [
 	^ 'Action triggers'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #private }
 TriggerManagementModule >> registerTriggerManagementSystemForInstallationIn: systems [
 
 	^ self register: [ TriggerManagementSystem new ] in: systems
