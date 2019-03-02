@@ -25,8 +25,8 @@ TimestampingModule >> name [
 	^ 'Timestamping'
 ]
 
-{ #category : #initialization }
-TimestampingModule >> registerIdentifierSystemForInstallationIn: systems [
+{ #category : #private }
+TimestampingModule >> registerTimestampingSystemForInstallationIn: systems [
 
 	^ self register: [ TimestampingSystem new ] in: systems
 ]
