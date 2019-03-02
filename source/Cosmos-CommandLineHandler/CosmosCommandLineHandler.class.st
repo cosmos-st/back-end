@@ -123,20 +123,21 @@ CosmosCommandLineHandler >> buildAndStartCosmosAPI [
 { #category : #'private - building scheduler' }
 CosmosCommandLineHandler >> buildAndStartScheduler [
 
-	| scheduler  |
+	| scheduler |
 
 	scheduler := self periodicalScheduler.
-	
+
 	self timePeriodsToSchedule
-		do: [ :timePeriod | | task |
+		do: [ :timePeriod | 
+			| task |
 
 			task := Task
 				named: ('Notify every <1p>' expandMacrosWith: timePeriod)
-				do: [ (cosmos systemImplementing: #EventNotificationSystemInterface)
+				do: [ cosmos >> #EventNotificationSystemInterface
 						notifySubscribersTo: (TickEvent of: timePeriod) ].
 
 			scheduler schedule: task toBeExecutedEvery: timePeriod ].
-		
+
 	scheduler start
 ]
 
