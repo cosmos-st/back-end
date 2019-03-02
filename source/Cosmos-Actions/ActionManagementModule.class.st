@@ -26,7 +26,7 @@ ActionManagementModule >> name [
 ]
 
 { #category : #private }
-ActionManagementModule >> registerMetadataSystemForInstallationIn: systems [
+ActionManagementModule >> registerActionManagementSystemForInstallationIn: systems [
 
 	^ self register: [ ActionManagementSystem new ] in: systems
 ]
